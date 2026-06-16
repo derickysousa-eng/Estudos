@@ -1,24 +1,23 @@
 import random
 import sys
-ip = f'{random.randrange(100,256)}.{random.randrange(0,256)}.{random.randrange(0,256)}.{random.randrange(0,256)}'
-velocidade = [300,100,200]
-upload = random.randrange(50,200)
-download = upload + 50
-ping = random.randrange(1,20)
-if ping >= 150 :
- print(f'O {ping} ms (Horrivel)')
-elif ping >= 100 :
-  print(f'O ping {ping} ms (Ruim)')
-elif ping >= 50 :
-  print(f'O ping {ping} ms (Bom)')
-elif ping >= 20 :
-  print(f'O ping {ping} ms (Muito bom)')
-else:
-  print(f'O ping {ping} ms (Excelente)')
-dispositivos = random.randrange(1,10)
+
+# declaração das variaveis para geração do num de protoc
 ano = '2026'
 numero_aleatorio = random.randrange(100000000, 1000000000)
-protocolo = ano + str(numero_aleatorio)
+protocolo = ano + str(numero_aleatorio) 
+
+print("Bem-vindo à Boom Net\n Conectando você ao que importa. 🚀")
+nome_do_cliente = input('Me informe seu nome:\n')
+ # Verificar/validar o dado preenchido pelo user é um numero e se possui 3 digitos
+while True:
+    digitos_do_cpf = input('Me informe os 3 primeiros digitos do seu cpf:\n')
+    if not digitos_do_cpf.isdigit():
+        print("\n❌ Erro: Favor preencher apenas com números.")
+    elif len(digitos_do_cpf) != 3:
+        print("\n❌ Erro: Favor digitar exatamente 3 números.")
+    else:
+        break
+
 def fim ():
  while True:
    menu_fim = input('\n Ajudo em algo mais?\n 1 -✅ Sim\n'
@@ -31,8 +30,28 @@ def fim ():
     sys.exit()
    else:
     print('\n Opção inválida.')
+
 def informacao_da_rede():
-   while True:
+
+    ip = f'{random.randrange(100,256)}.{random.randrange(0,256)}.{random.randrange(0,256)}.{random.randrange(0,256)}'
+    velocidade = [300,100,200]
+    upload = random.randrange(50,200)
+    download = upload + 50
+    ping = random.randrange(1,20)
+    if ping >= 150 :
+        print(f'O {ping} ms (Horrivel)')
+    elif ping >= 100 :
+        print(f'O ping {ping} ms (Ruim)')
+    elif ping >= 50 :
+        print(f'O ping {ping} ms (Bom)')
+    elif ping >= 20 :
+        print(f'O ping {ping} ms (Muito bom)')
+    else:
+        print(f'O ping {ping} ms (Excelente)')
+    
+    dispositivos = random.randdrange(1,10)
+
+    while True:
       print(f'Olá! Realizamos um teste rápido na sua linha. Aqui estão os dados atuais da sua conexão:')
       print(f'🌐 Status da Conexão: 🟢 ONLINE (Sinal Estável)')
       print(f'🌍 IP Público: {ip}')
@@ -63,7 +82,6 @@ def financeiro():
       break
      else:
       print('Opção Invalida')
-
 
 def menu_wifi_solucao():
   while True:
@@ -181,17 +199,19 @@ def suporte_tecnico():
     break
   else:
         print('\n Opção inválida.')
+
 def menu_principal():
+ print(f'\nOlá, {nome_do_cliente}! Como podemos te ajudar hoje?')
  while True:
    menu = input(
-     '\n 🚀 Bem-vindo à Boom Net\n Conectando você ao que importa.\n'
+     '\nSelecione o numero da opção que você necessita de atendimento.\n'
     '1 - 🛠️ Suporte Técnico\n'
     '2 - 💳 Financeiro\n'
     '3 - 🌐 Informações da Rede\n'
     '4 - ❌ Encerrar Atendimento\n'
 )
    if menu == '1':
-    print('Você acessou o suporte Técnico')
+    print('Você acessou o suporte a')
     suporte_tecnico()
    elif menu == '2':
       print('Voce acessou ao financeiro')
@@ -204,9 +224,4 @@ def menu_principal():
    else:
         print('\n Opção inválida.')
 
-
-
-nome_do_cliente = input('Me informe seu nome:\n')
-digitos_do_cpf = (input('Me informe os 3 primeiros digitos do seu cpf\n'))
-print(f'\nOlá, {nome_do_cliente}')
 menu_principal()
