@@ -49,7 +49,7 @@ def informacao_da_rede():
     else:
         print(f'O ping {ping} ms (Excelente)')
 
-    dispositivos = random.randdrange(1,10)
+    dispositivos = random.randrange(1,10)
 
     while True:
       print(f'Olá! Realizamos um teste rápido na sua linha. Aqui estão os dados atuais da sua conexão:')
