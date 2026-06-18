@@ -34,7 +34,7 @@ Biblioteca random
 Biblioteca sys
 ▶️ Como Executar
 Clone o repositório:
-git clone https://github.com/seu-usuario/boom-net.git
+git clone [https://github.com/seu-usuario/boom-net.git](https://github.com/derickysousa-eng/Estudos/blob/main/.gitignore)
 Acesse a pasta do projeto:
 cd boom-net
 Execute o arquivo:
